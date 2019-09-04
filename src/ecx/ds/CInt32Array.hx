@@ -1,7 +1,7 @@
 package ecx.ds;
 
 #if js
-private typedef CInt32ArrayData = js.html.Int32Array;
+private typedef CInt32ArrayData = js.lib.Int32Array;
 #else
 private typedef CInt32ArrayData = CArray<Int>;
 #end
