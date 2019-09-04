@@ -126,7 +126,7 @@ class WorldConstructor {
 		for(service in world._orderedServices) {
 			service.world = world;
 
-			var system:System = Std.instance(service, System);
+			var system:System = #if haxe4 Std.downcast(service, System); #else Std.instance(service, System); #end
 			if(system != null) {
 				system.__configure();
 				if(system._families != null && system._families.length > 0) {
