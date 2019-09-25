@@ -46,7 +46,11 @@ class FieldsBuilder {
                         });
                     }
                     metas = [];
+                #if haxe4 // rc5
+                case ExprDef.EFunction(FNamed(name, _), f):
+                #else
                 case ExprDef.EFunction(name, f):
+                #end
                     fields.push({
                         name: getFieldName(name),
                         doc: null,
