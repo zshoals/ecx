@@ -24,6 +24,7 @@ class Service {
 	var world(default, null):World;
 
 	function initialize() {}
+	function shutdown() {}
 
 	function __serviceType():ServiceType {
 		return ServiceType.INVALID;
