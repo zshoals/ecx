@@ -44,7 +44,7 @@ class WorldConstructor {
 		world._orderedServices = createServicesOrder(config);
 		routeServices(world);
 		createFamilyList(world);
-		//initializeServices(world); Khaterizer exclusive change to permit service initialization at a different point in time
+		initializeServices(world);
 		deleteConfigurators(world);
 	}
 
